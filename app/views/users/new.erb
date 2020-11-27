@@ -1,0 +1,12 @@
+<div class="typewriter">
+<div class="typewriter-text"><h1>Sign up for a Movie Tracker Account</h1></div>
+
+<form method="POST" action="/users">
+    <input name="name" id="name" type="text" value="<%= @user ? @user.name : ""%> " placeholder="Name" /><br><br>
+
+    <input name="email" id="email" type="email" value="<%= @user ? @user.email : ""%> " placeholder="Email" /><br><br>
+
+    <input name="password" id="password" type="password" placeholder="Password"><br><br>
+    <button type="submit">Submit</button>
+</form>
+</div>
