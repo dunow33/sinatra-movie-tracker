@@ -6,4 +6,15 @@ class UsersController < ApplicationController
             erb :'users/new'
         end
     end
+
+    post '/users' do
+        @user = User.new(params)
+
+        if @user.save
+            session[:user_id] = @user.id
+            redirect "/movies"
+        else
+            erb :"/users/new"
+        end
+    end
 end
